@@ -178,7 +178,7 @@ resource "azurerm_network_security_rule" "vm" {
   direction                   = "Inbound"
   access                      = "Allow"
   protocol                    = "Tcp"
-  source_port_range           = var.bastion_subnet
+  source_port_range           = "10.0.2.0/27"
   destination_port_range      = coalesce(var.remote_port, module.os.calculated_remote_port)
   source_address_prefix       = "*"
   destination_address_prefix  = "*"
