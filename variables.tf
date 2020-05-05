@@ -154,7 +154,3 @@ variable "nb_data_disk" {
   description = "(Optional) Number of the data disks attached to each virtual machine"
   default     = 0
 }
-
-variable "bastion_subnet" {
-  description = "The subnet CIDR allocated to Bation Host to be used for NSG allow rule."
-}
